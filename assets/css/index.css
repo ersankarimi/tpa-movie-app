@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: #fafafa;
+	color: #303030;
+	line-height: 1.5;
+}
+
+.card-img-top {
+	background-size: cover;
+}
+
+@media screen and (max-width: 576px) {
+	#main-header {
+		font-size: 1.7rem;
+	}
+}
