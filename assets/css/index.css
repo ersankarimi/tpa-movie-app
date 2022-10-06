@@ -9,9 +9,18 @@ body {
 
 .card-img-top {
 	background-size: cover;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+h5.card-title {
+	font-size: 1.125rem !important;
 }
 
 @media screen and (max-width: 576px) {
+	.card {
+		width: 80%;
+	}
 	#main-header {
 		font-size: 1.7rem;
 	}
