@@ -12,4 +12,4 @@ Skilvul. Untuk detail tugas lebih lanjut bisa dilihat pada link berikut :
 
 ## Live Demo
 
-[BMI Calculator](https://ersan-movie-app.netlify.app/)
+[Movie App with TMDB API](https://ersan-movie-app.netlify.app/)
