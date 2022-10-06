@@ -25,6 +25,7 @@
 				<div class="col col-lg-4 col-xl-3">
 					<form role="search">
 						<input
+							id="search"
 							class="form-control me-2"
 							type="search"
 							placeholder="Search"
@@ -35,25 +36,8 @@
 			</div>
 		</div>
 
-		<main id="movie-list" class="container gap-4 mt-5 d-flex">
-			<div class="card" style="width: 21rem; max-height: 34rem">
-				<img
-					src="https://www.themoviedb.org/t/p/w220_and_h330_face/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
-					class="card-img-top h-75 img-fluid"
-					alt="..."
-				/>
-				<div
-					class="card-body d-flex justify-content-between flex-column shadow"
-				>
-					<div class="d-flex justify-content-between gap-2">
-						<h5 class="card-title fw-bold">
-							Fantastic Beast: The Secret of Dubmlore
-						</h5>
-						<h6 class="fw-semibold">rating</h6>
-					</div>
-					<p class="card-text">Apr 06, 2022</p>
-				</div>
-			</div>
+		<main class="container mt-5">
+			<div id="movies-wrapper" class="row justify-content-center"></div>
 		</main>
 
 		<!-- Bootstrap Scripts -->
