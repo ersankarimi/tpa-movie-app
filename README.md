@@ -9,6 +9,7 @@ Skilvul. Untuk detail tugas lebih lanjut bisa dilihat pada link berikut :
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
 
 ## Live Demo
 
