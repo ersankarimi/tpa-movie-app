@@ -1,27 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
+:root {
+  --main-color: #121829;
+  --main-white-color: #f3f4f6;
+}
+
 body {
-	font-family: "Poppins", sans-serif;
-	background-color: #fafafa;
-	color: #303030;
-	line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-color);
+  color: var(--main-white-color);
+  line-height: 1.5;
+}
+
+header {
+  background-color: rgba(18, 24, 41, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+main {
+  margin-top: 10em;
+}
+
+.card {
+  background-color: rgba(32, 40, 62, 0.6);
+  padding: 1em;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.card-rating {
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  padding: 0.8em;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  gap: 4px;
+  justify-content: center;
+  color: #ffad49;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+  background-color: transparent;
 }
 
 .card-img-top {
-	background-size: cover;
-	-o-object-fit: cover;
-	object-fit: cover;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 h5.card-title {
-	font-size: 1.125rem !important;
+  font-size: 1.125rem !important;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.085);
+  border: 1px solid rgba(243, 244, 246, 0.2);
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+label > svg {
+  width: 1.25rem;
+  height: auto;
+}
+
+#search {
+  background-color: transparent;
+  width: 100%;
+  border: transparent;
+  outline: none;
+  color: var(--main-white-color);
+}
+
+#search:focus {
+  border: transparent !important;
+  outline: none !important;
+}
+
+form:focus-within {
+  outline: 2px solid rgba(243, 244, 246, 0.2);
 }
 
 @media screen and (max-width: 576px) {
-	.card {
-		width: 80%;
-	}
-	#main-header {
-		font-size: 1.7rem;
-	}
+  .card {
+    width: 80%;
+  }
+  #main-header {
+    font-size: 1.7rem;
+  }
 }
