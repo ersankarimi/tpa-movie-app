@@ -1,5 +1,5 @@
 export const createMovieElement = ({
-  original_title,
+  title,
   vote_average,
   poster_path,
   release_date,
@@ -7,9 +7,12 @@ export const createMovieElement = ({
   release_date = new Date(release_date).toDateString().split(" ").slice(1);
 
   const moviesWrapperElement = document.querySelector("#movies-wrapper");
+
   const cardWrapper = document.createElement("div");
   cardWrapper.classList.add(
     "card",
+    "rounded-4",
+    "position-relative",
     "col-12",
     "col-sm-6",
     "col-lg-4",
@@ -21,26 +24,27 @@ export const createMovieElement = ({
   cardWrapper.style.maxHeight = "38rem";
 
   cardWrapper.innerHTML = `
-  <img
-					src="${
-            poster_path
-              ? `https://www.themoviedb.org/t/p/w500${poster_path}`
-              : "https://us.123rf.com/450wm/yehorlisnyi/yehorlisnyi2104/yehorlisnyi210400016/167492439-no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-comin.jpg?ver=6"
-          }"
-					class="card-img-top h-75 img-fluid"
-					alt="${original_title} Poster"
+  <div class="position-absolute card-rating">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.15327 2.34001L10.3266 4.68668C10.4866 5.01334 10.9133 5.32668 11.2733 5.38668L13.3999 5.74001C14.7599 5.96668 15.0799 6.95334 14.0999 7.92668L12.4466 9.58001C12.1666 9.86001 12.0133 10.4 12.0999 10.7867L12.5733 12.8333C12.9466 14.4533 12.0866 15.08 10.6533 14.2333L8.65994 13.0533C8.29994 12.84 7.70661 12.84 7.33994 13.0533L5.34661 14.2333C3.91994 15.08 3.05327 14.4467 3.42661 12.8333L3.89994 10.7867C3.98661 10.4 3.83327 9.86001 3.55327 9.58001L1.89994 7.92668C0.926606 6.95334 1.23994 5.96668 2.59994 5.74001L4.72661 5.38668C5.07994 5.32668 5.50661 5.01334 5.66661 4.68668L6.83994 2.34001C7.47994 1.06668 8.51994 1.06668 9.15327 2.34001Z" stroke="#FFAD49" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <h6 class="fw-semibold m-0">${parseFloat(vote_average).toFixed(1)}</h6>
+  </div>
+  <img src="${
+    poster_path
+      ? `https://www.themoviedb.org/t/p/w500${poster_path}`
+      : "https://us.123rf.com/450wm/yehorlisnyi/yehorlisnyi2104/yehorlisnyi210400016/167492439-no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-comin.jpg?ver=6"
+  }"
+					class="card-img-top h-75 img-fluid rounded-2"
+					alt="${title} Poster"
 				/>
 				<div
-					class="card-body d-flex justify-content-between flex-column shadow"
+					class="card-body d-flex justify-content-between flex-column "
 				>
-					<div class="row">
 						<h5 class="card-title fw-bold col-9 fs-5 text-wrap overflow-hidden">
-							${original_title}
+							${title}
 						</h5>
-						<h6 class="fw-semibold col-3 text-end">${parseFloat(vote_average).toFixed(
-              1
-            )}</h6>
-					</div>
+				
 					<p class="card-text">${release_date[0]} ${release_date[1]}, ${
     release_date[2]
   }</p>

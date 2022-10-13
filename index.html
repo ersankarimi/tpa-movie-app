@@ -17,16 +17,33 @@
   </head>
 
   <body>
-    <div class="container p-4 p-lg-5">
+    <header class="container p-3 fixed-top">
       <div class="row justify-content-between align-items-center">
         <div class="col">
           <h1 id="main-header" class="fw-bold display-5 m-0">SkilMovie</h1>
         </div>
         <div class="col col-lg-4 col-xl-3">
-          <form role="search">
+          <form role="search" class="">
+            <label for="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </label>
             <input
               id="search"
-              class="form-control me-2"
+              autocomplete="off"
+              class="me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -34,10 +51,13 @@
           </form>
         </div>
       </div>
-    </div>
+    </header>
 
-    <main class="container mt-5">
-      <div id="movies-wrapper" class="row justify-content-center"></div>
+    <main class="container">
+      <div
+        id="movies-wrapper"
+        class="row justify-content-center gap-3 w-100"
+      ></div>
     </main>
 
     <!-- Bootstrap Scripts -->
